@@ -43,7 +43,9 @@ const App = () => (
         >
           <React.Suspense fallback={<Spinner size="xl" />}>
             <Box
-              p="12rem"
+              pl="9rem"
+              pb="1rem"
+              pr="1rem"
               mr="5rem"
               ml="1rem"
               w="70rem"
