@@ -24,33 +24,38 @@ const App = () => (
       p="0"
       flexDirection="column"
     >
-      <Box color="#fff" position="fixed" right="0" top="0" mr="2rem" mt="2rem">
-        Latest Build Date: <Text fontWeight="bold">{version}</Text>
-      </Box>
       <Flex
         border="1px solid #151421"
         borderRadius="1rem"
-        height="50vh"
-        justifyContent="space-around"
+        height="150vh"
+        width="100%"
+        justifyContent="flex-start"
         alignItems="center"
         flexDirection="column"
-        padding="5rem"
         backgroundColor="#6F60EA"
       >
         <Heading color="#fff">CONTAINER</Heading>
-        <Flex direction="row" justifyContent="space-around">
+        <Flex
+          width="100%"
+          margin="1rem"
+          direction="row"
+          justifyContent="flex-start"
+        >
           <React.Suspense fallback={<Spinner size="xl" />}>
             <Box
-              p="2rem"
-              mr="2rem"
+              p="12rem"
+              mr="5rem"
+              ml="1rem"
+              w="70rem"
+              h="35rem"
               border="1px solid #aeaeae"
               borderRadius="1rem"
               backgroundColor="#fff"
             >
-              <Heading color="#6F60EA" mb="1rem">
-                CatalogItem - APP-1
+              <Heading color="#6F60EA" mb="1rem" ml="10rem">
+                MovieBox - APP-1
               </Heading>
-              <AppOne />
+              <AppOne></AppOne>
             </Box>
           </React.Suspense>
           <React.Suspense fallback={<Spinner size="xl" />}>
@@ -61,20 +66,20 @@ const App = () => (
               backgroundColor="#fff"
             >
               <Heading color="#6F60EA" mb="1rem">
-                Cart - APP-2
+                List - APP-2
               </Heading>
               <AppTwo />
             </Box>
           </React.Suspense>
         </Flex>
       </Flex>
-      <Link
+      {/* <Link
         marginTop="5rem"
         href="https://github.com/HuiiTran/Seminar-about-modern-problem"
         target="_blank"
       >
         <Image src="./git.png" height="45px" width="45px" />
-      </Link>
+      </Link> */}
     </Center>
   </>
 );
